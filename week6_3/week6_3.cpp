@@ -1,13 +1,15 @@
 #include <stdio.h>
-int main() {
-    int rows, coef = 1;
-    printf("rows: ");
-    scanf_s("%d", &rows);
+int main() 
+{
+    int n, coef = 1;
+    printf("power number : ");
+    scanf_s("%d", &n);
+    int rows = n + 1;
     for (int i = 0; i < rows; i++) 
     {
         for (int space = 0; space < rows - i; space++)
         {
-            printf("  ");
+            printf("    ");
         }
         for (int j = 0; j <= i; j++) 
         {
@@ -17,9 +19,9 @@ int main() {
             }
             else
             {
-                coef = coef * (i - j + 1) / j;
+                coef =  coef *(i - j + 1) / j;
             }
-            printf("%4d", coef);
+            printf(" %6d ", coef);
         }
         printf("\n");
     }
